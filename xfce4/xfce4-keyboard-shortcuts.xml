@@ -1,0 +1,58 @@
+<!-- These properties are only for custom key bindings since the whole
+xml file is pretty huge and including it all would be unnecessary.
+Just add the following commands/properties in the file under the
+<property name="custom" type="empty"></property> tags as shown here. -->
+
+<!-- XFCE4 CUSTOM COMMANDS
+  Super + j = Web Browser (Firefox, in this case)
+  Super + k = Terminal Emulator
+  Super + l = Emacs
+  Super + h = File Explorer (Thunar, in this case)
+-->
+
+<!-- XFCE4 KEYBOARD SHORTCUTS
+  Super + Up = Tile Window Up
+  Super + Right = Tile Window Right
+  Super + Left = Tile Window Left
+  Super + Down = Tile Window Down
+
+  Super + p = Full Screen Window
+  Super + o = Maximize Window
+  Super + i = Minimize Window
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-keyboard-shortcuts" version="1.0">
+  <property name="commands" type="empty">
+    <property name="default" type="empty">
+      <!-- Unchanged defaults, omitted here -->
+    </property>
+    <property name="custom" type="empty">
+      <!-- Redundant properties omitted here -->
+      <property name="&lt;Super&gt;j" type="string" value="firefox"/>
+      <property name="&lt;Super&gt;k" type="string" value="exo-open --launch TerminalEmulator"/>
+      <property name="&lt;Super&gt;h" type="string" value="thunar"/>
+      <property name="&lt;Super&gt;l" type="string" value="emacs"/>
+    </property>
+  </property>
+  <property name="xfwm4" type="empty">
+    <property name="default" type="empty">
+      <!-- Unchanged defaults, omitted here -->
+    </property>
+    <property name="custom" type="empty">
+      <!-- Redundant properties omitted here -->
+      <property name="&lt;Super&gt;Up" type="string" value="tile_up_key"/>
+      <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
+      <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
+      <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
+      <property name="&lt;Super&gt;p" type="string" value="fullscreen_key"/>
+      <property name="&lt;Super&gt;i" type="string" value="hide_window_key"/>
+      <property name="&lt;Super&gt;o" type="string" value="maximize_window_key"/>
+    </property>
+  </property>
+  <property name="providers" type="array">
+    <value type="string" value="xfwm4"/>
+    <value type="string" value="commands"/>
+  </property>
+</channel>
