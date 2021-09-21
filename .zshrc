@@ -11,6 +11,7 @@ export LANG=en_US.UTF-8
 
 # aliases
 alias mp=mousepad
+alias doom="~/.emacs.d/bin/doom"
 alias nv="cd /run/media/blaze/New\ Volume"
 
 # crr = current read directory
@@ -39,3 +40,8 @@ export PATH=$FLUTTER_HOME/bin:$PATH
 # current working flask directory
 export FLASK_APP=~/Documents/projects/flask_interface/home_page.py
 export FLASK_ENV=development
+
+#export current working go workspace
+export GOPATH=~/Documents/go-workspace
+export PATH=$PATH:/$GOPATH/bin
+
