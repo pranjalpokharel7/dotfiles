@@ -12,12 +12,15 @@ export LANG=en_US.UTF-8
 # aliases
 alias mp=mousepad
 alias doom="~/.emacs.d/bin/doom"
-alias nv="cd /run/media/blaze/New\ Volume"
+alias nv="cd /run/media/blaze/New-Volume"
+alias gc="git clone"
+alias rb="rustup docs --book"
 
 # crr = current read directory
 # cpr = current project directory
 alias cpr="cd ~/Documents/projects_s"
-alias crr="cd /run/media/blaze/New\ Volume/Study\ Semester/sem\ 4/applied\ maths/"
+alias crr="cd /run/media/blaze/New-Volume/Study\ Semester/sem\ 4/applied\ maths/"
+alias clg="cd ~/Documents/lang"
 
 # redshift aliases
 alias rs="redshift -O 3500"
@@ -31,17 +34,19 @@ alias login="~/Scripts/internet_login.sh"
 alias dwa="youtube-dl -x --audio-format 'aac' --output \"%(title)s.%(ext)s\""
 alias pnv="mpv --no-video"
 alias pg="ping www.google.com"
-alias vf="vifm ." # opens vifm in the current directory as opposed to root
 
 # export flutter root directory as path
 export FLUTTER_HOME=~/flutter
 export PATH=$FLUTTER_HOME/bin:$PATH
 
+# export chrome executable for flutter, chromium works fine
+export CHROME_EXECUTABLE=/usr/bin/chromium
+export PATH=$PATH:/$CHROME_EXECUTABLE
+
 # current working flask directory
 export FLASK_APP=~/Documents/projects/flask_interface/home_page.py
 export FLASK_ENV=development
 
-#export current working go workspace
+# export current working go workspace
 export GOPATH=~/Documents/go-workspace
 export PATH=$PATH:/$GOPATH/bin
-
