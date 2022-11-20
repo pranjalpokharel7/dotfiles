@@ -1,45 +1,39 @@
 {
-    "workbench.colorTheme": "Monokai",
-    "window.zoomLevel": 2,
-    "telemetry.enableTelemetry": false,
-    "workbench.colorCustomizations": {
-        "editorWarning.foreground": "#00000000",
-        "editorError.foreground": "#00000000",
-        "editorWarning.border": "#00000000",
-        "editorError.border": "#00000000"
-    },
-    "editor.multiCursorModifier": "ctrlCmd",
-    "python.showStartPage": false,
-    "git.enabled": false,
-    "git.autoRepositoryDetection": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.startupEditor": "newUntitledFile",
-    "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
-    "editor.minimap.enabled": false,
-    "vim.smartRelativeLine": true,
-    "editor.cursorStyle": "line",
-    "editor.insertSpaces": false,
-    "editor.lineNumbers": "on",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "off",
-    "[python]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 4
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[dart]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.rulers": [
-            80
-        ],
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
-    },
-    "editor.formatOnSave": true
+  // workbench settings
+  "workbench.colorTheme": "Monokai",
+  "workbench.activityBar.visible": false,
+  "workbench.startupEditor": "none",
+
+  // editor settings
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "'Fira Code', 'monospace', monospace",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "breadcrumbs.enabled": false,
+
+  // window settings
+  "window.zoomLevel": 1,
+  "window.menuBarVisibility": "toggle",
+
+  // extensions
+  "vim.smartRelativeLine": true,
+  "rust-analyzer.checkOnSave.enable": false,
+
+  // language specific
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+
+  // others
+  "files.exclude": {
+    "**/node_modules": true
+  }
 }
