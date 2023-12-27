@@ -1,39 +1,124 @@
 {
-  // workbench settings
-  "workbench.colorTheme": "Monokai",
-  "workbench.activityBar.visible": false,
   "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 1,
+  "breadcrumbs.enabled": false,
 
-  // editor settings
+  // --- editor settings
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.fontFamily": "'Fira Code', 'monospace', monospace",
   "editor.fontSize": 15,
-  "editor.formatOnSave": true,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
   "editor.multiCursorModifier": "ctrlCmd",
-  "breadcrumbs.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
 
-  // window settings
-  "window.zoomLevel": 1,
-  "window.menuBarVisibility": "toggle",
+  // --- extensions
 
-  // extensions
+  // vim
   "vim.smartRelativeLine": true,
-  "rust-analyzer.checkOnSave.enable": false,
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-h>": false,
+    "<C-f>": false,
+    "<C-x>": false,
+    "<C-c>": false,
+    "<C-b>": false,
+    "<C-i>": false,
+    "<C-p>": false,
+    "<C-a>": false
+  },
 
-  // language specific
+  // todo tree
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "ASK",
+    "DONE",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "DONE": {
+      "background": "#0ad681",
+      "foreground": "#fff"
+    }
+  },
+
+  // code whisperer
+  "aws.suppressPrompts": {
+    "codeWhispererConnectionExpired": true,
+    "codeWhispererNewWelcomeMessage": true
+  },
+
+  // remote SSH
+  "remote.SSH.remoteServerListenOnSocket": true,
+  "remote.SSH.remotePlatform": {
+    "transaction-server-v2-dev": "linux",
+    "market-server-v2-dev": "linux",
+    "dataops-tools-dev-1": "linux"
+  },
+
+  // eslint/prettier
+  "eslint.validate": ["javascript"],
+  "eslint.format.enable": true,
+  "prettier.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // --- language specific
+
+  // html/css/js
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // typescript
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // json
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  // c/cpp
+  "C_Cpp.clang_format_fallbackStyle": "Microsoft",
   "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
 
-  // others
+  // python
+  "[python]": {
+    "editor.formatOnType": true
+  },
+
+  // --- others
   "files.exclude": {
-    "**/node_modules": true
-  }
+    "**/.next": true,
+    "**/env": true,
+    "**/node_modules": true,
+    "**/venv": true
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "debug.disassemblyView.showSourceCode": false,
+  "workbench.colorTheme": "GitHub Light Default"
 }
