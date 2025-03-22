@@ -15,6 +15,15 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
 
+  // --- debug
+  "debug.disassemblyView.showSourceCode": false,
+  "debug.allowBreakpointsEverywhere": true,
+
+  // git
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.telemetry.enabled": false,
+  "git.enableSmartCommit": true,
+
   // --- extensions
 
   // vim
@@ -47,20 +56,6 @@
       "background": "#0ad681",
       "foreground": "#fff"
     }
-  },
-
-  // code whisperer
-  "aws.suppressPrompts": {
-    "codeWhispererConnectionExpired": true,
-    "codeWhispererNewWelcomeMessage": true
-  },
-
-  // remote SSH
-  "remote.SSH.remoteServerListenOnSocket": true,
-  "remote.SSH.remotePlatform": {
-    "transaction-server-v2-dev": "linux",
-    "market-server-v2-dev": "linux",
-    "dataops-tools-dev-1": "linux"
   },
 
   // eslint/prettier
@@ -103,12 +98,24 @@
   },
 
   // c/cpp
-  "C_Cpp.clang_format_fallbackStyle": "Microsoft",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
   "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
 
   // python
   "[python]": {
     "editor.formatOnType": true
+  },
+  "python.createEnvironment.trigger": "off",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+
+  // rust
+  "[rust]": {
+    "editor.defaultFormatter": "jinxdash.prettier-rust"
   },
 
   // --- others
@@ -118,7 +125,8 @@
     "**/node_modules": true,
     "**/venv": true
   },
-  "git.openRepositoryInParentFolders": "never",
-  "debug.disassemblyView.showSourceCode": false,
-  "workbench.colorTheme": "GitHub Light Default"
+  "solidity.telemetry": false,
+  "markdown.preview.fontSize": 18,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "terminal.integrated.gpuAcceleration": "off",
 }

@@ -1,52 +1,32 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/home/blaze/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="eastwood"
+HYPHEN_INSENSITIVE="true"
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
 source $ZSH/oh-my-zsh.sh
-export TERM=xterm-256color
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
+export PATH=$PATH:/home/emerald/.local/bin:/opt/:/home/emerald/Applications/
+export EDITOR='nvim'
 
-# aliases
-alias mp=mousepad
-alias doom="~/.emacs.d/bin/doom"
-alias nv="cd /run/media/blaze/New-Volume"
 alias gc="git clone"
-alias rb="rustup docs --book"
+alias vim='nvim'
 
-# crr = current read directory
-# cpr = current project directory
-alias cpr="cd ~/Documents/projects_s"
-alias crr="cd /run/media/blaze/New-Volume/Study\ Semester/sem\ 4/applied\ maths/"
-alias clg="cd ~/Documents/lang"
+alias cpr="cd ~/Documents/project_s"
+alias cdr="cd ~/Documents/project_s/naamche/realpha-data-repository/"
+alias npr="cd /media/emerald/ssd2/projects"
+alias dwa="yt-dlp -x --audio-format 'aac' --output \"%(title)s.%(ext)s\""
+alias python3="/usr/bin/python3.11"
 
-# redshift aliases
-alias rs="redshift -O 3500"
-alias rx="redshift -x"
+alias pwn="ssh -i ~/.ssh/pwn_key hacker@pwn.college"
 
-# custom scripts, can be found in the pranjalpokharel7/campus-bash repository
-alias swt="~/Scripts/switch"
-alias login="~/Scripts/internet_login.sh"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "/media/emerald/ssd2/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# utility aliases
-alias dwa="youtube-dl -x --audio-format 'aac' --output \"%(title)s.%(ext)s\""
-alias pnv="mpv --no-video"
-alias pg="ping www.google.com"
+alias .="nvim ."
 
-# export flutter root directory as path
-export FLUTTER_HOME=~/flutter
-export PATH=$FLUTTER_HOME/bin:$PATH
+# bitcoind (configure paths)
+alias bitcoind="/media/emerald/ssd2/projects/bitcoin-build/src/bitcoind"
+alias bitcoin-cli="/media/emerald/ssd2/projects/bitcoin-build/src/bitcoin-cli"
 
-# export chrome executable for flutter, chromium works fine
-export CHROME_EXECUTABLE=/usr/bin/chromium
-export PATH=$PATH:/$CHROME_EXECUTABLE
-
-# current working flask directory
-export FLASK_APP=~/Documents/projects/flask_interface/home_page.py
-export FLASK_ENV=development
-
-# export current working go workspace
-export GOPATH=~/Documents/go-workspace
-export PATH=$PATH:/$GOPATH/bin
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
