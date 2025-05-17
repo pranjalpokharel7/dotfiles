@@ -12,3 +12,13 @@ vim.opt.wrap = false -- word wrap is disabled
 vim.opt.tabstop = 2 -- maximum space tab occupies, can experiment with 4
 vim.opt.shiftwidth = 2 -- blank characters used to indent a line, eq to tabstop
 vim.opt.expandtab = false -- do not convert tab character to spaces
+
+-- open terminal in insert mode
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    callback = function()
+        if vim.bo.buftype == "terminal" then
+            vim.cmd("startinsert")
+        end
+    end,
+})

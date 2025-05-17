@@ -1,4 +1,4 @@
-require("core.options")
-require("core.keybindings")
-require("core.plugins")
-require("core.config_plugins")
+require("config.lazy")
+require("config.core.options")
+require("config.core.keymaps")
+require("config.telescope")
