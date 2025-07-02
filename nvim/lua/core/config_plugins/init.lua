@@ -1,5 +1,0 @@
-require("core.config_plugins.theme")
-require("core.config_plugins.nerdtree")
-require("core.config_plugins.telescope")
-require("core.config_plugins.completion")
-require("core.config_plugins.lsp_config")
