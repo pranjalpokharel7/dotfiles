@@ -6,7 +6,7 @@ return {
 		name = "github-theme",
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme github_light_default]])
+			vim.cmd([[colorscheme github_dark]])
 		end,
 	},
 
@@ -69,5 +69,15 @@ return {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 		},
+	},
+
+	-- debugger (experimental)
+	{
+		"mfussenegger/nvim-dap",
+	},
+
+	-- activity watcher?
+	{
+		"ActivityWatch/aw-watcher-vim"
 	},
 }
