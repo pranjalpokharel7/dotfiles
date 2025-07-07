@@ -76,8 +76,8 @@ return {
 		"mfussenegger/nvim-dap",
 	},
 
-	-- activity watcher?
-	{
-		"ActivityWatch/aw-watcher-vim"
-	},
+	-- activity watcher (disabled for now)
+	-- {
+	-- 	"ActivityWatch/aw-watcher-vim"
+	-- },
 }

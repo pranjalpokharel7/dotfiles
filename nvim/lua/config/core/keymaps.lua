@@ -4,10 +4,10 @@ vim.keymap.set("n", "<leader>s", ":wa<CR>", { noremap = true }) -- save all buff
 vim.keymap.set("n", "<leader>a", ":wa<CR>:qa<CR>", { noremap = true }) -- exit nvim (save and close all buffers)
 
 -- pane navigation using ctrl and movement keys
-vim.keymap.set("n", "<leader>k", ":wincmd k<CR>")
-vim.keymap.set("n", "<leader>j", ":wincmd j<CR>")
-vim.keymap.set("n", "<leader>h", ":wincmd h<CR>")
-vim.keymap.set("n", "<leader>l", ":wincmd l<CR>")
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 -- automatically add closing ( { [ ' " `
 local opts = { noremap = true, silent = true }
