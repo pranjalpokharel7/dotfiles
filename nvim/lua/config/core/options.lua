@@ -1,5 +1,5 @@
 vim.opt.number = true -- show line numbers
-vim.relativenumber = true -- relative numbers
+vim.opt.relativenumber = true -- relative numbers
 
 vim.opt.ignorecase = true -- ignore case while searching
 vim.opt.smartcase = true -- but case will matter when you use upper case

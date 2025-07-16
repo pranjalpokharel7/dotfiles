@@ -14,9 +14,9 @@ conform.setup({
 
 		python = function(bufnr)
 			if conform.get_formatter_info("ruff_format", bufnr).available then
-				return { "ruff_format" }
+				return { "isort", "ruff_format", "docformatter" }
 			else
-				return { "isort", "black" } -- runs the formatters sequentially
+				return { "isort", "black", "docformatter" } -- runs the formatters sequentially
 			end
 		end,
 

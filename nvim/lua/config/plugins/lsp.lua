@@ -1,4 +1,4 @@
-local servers = { "rust_analyzer", "clangd" }
+local servers = { "rust_analyzer", "clangd", "pyright" }
 
 -- enable diagnostics
 vim.diagnostic.config({
