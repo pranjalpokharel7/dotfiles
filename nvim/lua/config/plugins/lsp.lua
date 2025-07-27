@@ -1,4 +1,4 @@
-local servers = { "rust_analyzer", "clangd", "pyright" }
+local servers = { "rust_analyzer", "clangd", "pyright", "gopls" }
 
 -- enable diagnostics
 vim.diagnostic.config({
@@ -15,6 +15,12 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opts)
 	vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opts)
 	vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts)
+	vim.api.nvim_set_keymap(
+		"n",
+		"<leader>do",
+		"<cmd>lua vim.diagnostic.open_float()<CR>",
+		{ noremap = true, silent = true }
+	)
 end
 
 for _, server in ipairs(servers) do

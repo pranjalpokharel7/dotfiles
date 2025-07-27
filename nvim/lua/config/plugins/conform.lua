@@ -3,6 +3,7 @@ local conform = require("conform")
 conform.setup({
 	formatters_by_ft = {
 		rust = { "rustfmt" },
+		go = { "gofmt" },
 
 		lua = { "stylua" },
 

@@ -8,6 +8,10 @@ require("neo-tree").setup({
 				"*__pycache__*",
 				".pytest_cache",
 			},
+			follow_current_file = {
+				enabled = true, -- This will find and focus the file in the active buffer every time
+				--              -- the current file is changed while the tree is open.
+			},
 		},
 	},
 	window = {

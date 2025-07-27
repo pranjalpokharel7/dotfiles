@@ -7,7 +7,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 source $ZSH/oh-my-zsh.sh
 
 # path
-export PATH=$PATH:/home/emerald/.local/bin:/opt/:/home/emerald/Applications/:/opt/nvim-linux-x86_64/bin
+export PATH=$PATH:/home/emerald/.local/bin:/opt/:/home/emerald/Applications/:/opt/nvim-linux-x86_64/bin:/usr/local/go/bin
 
 # git
 alias gc="git clone"
@@ -17,6 +17,7 @@ alias npr="cd /media/emerald/ssd2/projects" # projects directory in external vol
 alias dwa="yt-dlp -x --audio-format 'aac' --output \"%(title)s.%(ext)s\"" # download audio
 alias python3="/usr/bin/python3.11" # ubuntu problems :(
 alias notes="nvim ~/Documents/private-vault" # previously obsidian vault
+alias hosts="sudo vim /etc/hosts"
 
 # pwn college
 alias pwn="ssh -i ~/.ssh/pwn_key hacker@pwn.college"
@@ -27,6 +28,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "/media/emerald/ssd2
 
 # neovim
 export EDITOR="nvim"
+alias vim="nvim"
 alias conf="nvim ~/.config/nvim" # open neovim config
 
 # open nvim with title set correctly to directory name
@@ -46,3 +48,7 @@ alias bitcoin-cli="/media/emerald/ssd2/projects/bitcoin-build/src/bitcoin-cli"
 # needed by OBS for screen record in wayland
 export QT_QPA_PLATFORM=wayland
 
+# export go binaries to path
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+eval "$(zoxide init --cmd cd zsh)"
