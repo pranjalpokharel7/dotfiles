@@ -7,7 +7,7 @@ vim.opt.smartcase = true -- but case will matter when you use upper case
 vim.opt.mouse = "a" -- use mouse (double click will select the word!)
 vim.opt.hlsearch = false -- stop highlighting search results
 
-vim.opt.wrap = true -- word wrap is disabled
+vim.opt.wrap = false -- word wrap is disabled
 vim.opt.linebreak = true -- do not break words into multiple lines
 
 vim.opt.tabstop = 2 -- maximum space tab occupies, can experiment with 4
@@ -16,3 +16,4 @@ vim.opt.expandtab = false -- do not convert tab character to spaces
 
 vim.o.clipboard = "unnamedplus" -- enable clipboard support
 
+vim.o.history = 200 -- increase command line history storage

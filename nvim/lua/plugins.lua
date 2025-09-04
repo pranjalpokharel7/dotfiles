@@ -76,6 +76,16 @@ return {
 		"mfussenegger/nvim-dap",
 	},
 
+	-- hardtime, develop better vim habits
+	{
+		"m4xshen/hardtime.nvim",
+		lazy = false,
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {
+			disable_mouse = false,
+		},
+	},
+
 	-- activity watcher (disabled for now)
 	-- {
 	-- 	"ActivityWatch/aw-watcher-vim"

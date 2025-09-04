@@ -5,6 +5,8 @@ require("neo-tree").setup({
 			show_hidden_count = true,
 			hide_dotfiles = false,
 			never_show_by_pattern = {
+				".git",
+				"env",
 				"*__pycache__*",
 				".pytest_cache",
 			},
