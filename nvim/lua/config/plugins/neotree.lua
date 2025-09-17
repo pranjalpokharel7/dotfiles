@@ -5,8 +5,10 @@ require("neo-tree").setup({
 			show_hidden_count = true,
 			hide_dotfiles = false,
 			never_show_by_pattern = {
+				"node_modules",
 				".git",
 				"env",
+				"venv",
 				"*__pycache__*",
 				".pytest_cache",
 			},

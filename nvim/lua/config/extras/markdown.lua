@@ -9,5 +9,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n", "k", "gk", opts)
     vim.keymap.set("n", "<Down>", "gj", opts)
     vim.keymap.set("n", "<Up>", "gk", opts)
+
+		-- enable word wrap on markdown files
+		vim.opt_local.wrap = true
   end,
 })

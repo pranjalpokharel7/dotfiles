@@ -23,7 +23,7 @@ conform.setup({
 		end,
 
 		-- run codespell/trim whitespace for all files
-		["*"] = { "codespell" },
+		["*"] = { "codespell --ignore-words .codespellignore" },
 		["_"] = { "trim_whitespace" },
 	},
 
