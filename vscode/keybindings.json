@@ -19,5 +19,88 @@
 		"key": "shift+tab",
 		"command": "selectPrevSuggestion",
 		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+	{
+		"key": "numpad1",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "numpad0",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "ctrl+shift+g",
+		"command": "-workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "numpad2",
+		"command": "workbench.files.action.collapseExplorerFolders"
+	},
+	{
+		"key": "numpad9",
+		"command": "workbench.action.closeEditorsInGroup"
+	},
+	{
+		"key": "ctrl+k w",
+		"command": "-workbench.action.closeEditorsInGroup"
+	},
+	{
+		"key": "numpad4",
+		"command": "workbench.action.previousEditor"
+	},
+	{
+		"key": "ctrl+pageup",
+		"command": "-workbench.action.previousEditor"
+	},
+	{
+		"key": "numpad6",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "-workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-interactiveEditor.start",
+		"when": "interactiveEditorHasProvider && !editorReadonly"
+	},
+	{
+		"key": "i",
+		"command": "notebook.format",
+		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "-notebook.format",
+		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-toggleSuggestionDetails",
+		"when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-focusSuggestion",
+		"when": "suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
 	}
 ]

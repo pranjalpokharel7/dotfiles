@@ -128,5 +128,5 @@
   "solidity.telemetry": false,
   "markdown.preview.fontSize": 18,
   "workbench.colorTheme": "Catppuccin Mocha",
-  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.gpuAcceleration": "off"
 }
