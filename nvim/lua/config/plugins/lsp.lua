@@ -25,8 +25,22 @@ local on_attach = function(_, bufnr)
 end
 
 for _, server in ipairs(servers) do
+	if server == "pyright" then
+		vim.lsp.config.pyright = {
+			settings = {
+				python = {
+					pythonPath = ".venv/bin/python" -- since we are using uv for setting up venv
+				}
+			},
+			on_attach = on_attach,
+		}
+	else
+		vim.lsp.config(server, {
+			on_attach = on_attach,
+		})
+	end
+end
+
+for _, server in ipairs(servers) do
 	vim.lsp.enable(server)
-	vim.lsp.config(server, {
-		on_attach = on_attach,
-	})
 end
