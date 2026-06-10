@@ -65,13 +65,13 @@ return {
 		},
 	},
 
-	-- debugger (experimental)
-	{
-		"mfussenegger/nvim-dap",
-	},
-
 	-- gitsigns (vscode experience)
 	{
 		"lewis6991/gitsigns.nvim",
+	},
+
+	-- indent object (for python selection at indentation levels)
+	{
+		"michaeljsmith/vim-indent-object",
 	}
 }
