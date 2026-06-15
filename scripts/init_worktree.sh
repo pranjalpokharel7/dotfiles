@@ -34,7 +34,19 @@ mkdir -p "$WORKTREE_BACKEND/logs"
 
 # Add symbolic links to configs
 ln -sfn "$DEV_DIR/.env" "$WORKTREE_BACKEND/"
-ln -sfn "$DEV_DIR/CLAUDE.md" "$WORKTREE_BACKEND/"
+ln -sfn "$DEV_DIR/data" "$WORKTREE_BACKEND/data"
+
+# Symlink all CLAUDE.md files (root + nested)
+while IFS= read -r -d '' claude_file; do
+    rel="${claude_file#$DEV_DIR/}"
+    target_dir="$WORKTREE_BACKEND/$(dirname "$rel")"
+    mkdir -p "$target_dir"
+    ln -sfn "$claude_file" "$target_dir/"
+done < <(find "$DEV_DIR" -name "CLAUDE.md" \
+    -not -path "*/.venv/*" \
+    -not -path "*/.git/*" \
+    -print0)
+
 ln -sfn "$DEV_DIR/.vscode" "$WORKTREE_BACKEND/.vscode"
 ln -sfn "$DEV_DIR/.claude" "$WORKTREE_BACKEND/.claude"
 ln -sfn "$DEV_DIR/.kiro" "$WORKTREE_BACKEND/.kiro"
