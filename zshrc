@@ -63,3 +63,18 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # todo sh path
 export TODO_DIR="$HOME/todo"
+
+# switch claude code profile
+ccenv() {
+    case "$1" in
+        work|personal)
+            cp ~/.claude.json.$1 ~/.claude.json && \
+						cp ~/.claude/.credentials.json.$1 ~/.claude/.credentials.json.work && \
+						echo "Switched to $1 profile"
+            ;;
+        *)
+            echo "Usage: claude-profile [work|personal]"
+            ;;
+    esac
+}
+
