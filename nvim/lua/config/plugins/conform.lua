@@ -2,17 +2,22 @@ local conform = require("conform")
 
 conform.setup({
 	formatters_by_ft = {
-		rust = { "rustfmt" },
 		go = { "gofmt" },
 
-		lua = { "stylua" },
-
 		-- stop_after_first == run the first formatter which is available
+		-- prettier picks up the project's .prettierrc automatically
 		html = { "prettierd", "prettier", stop_after_first = true },
 		css = { "prettierd", "prettier", stop_after_first = true },
+		scss = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettierd", "prettier", stop_after_first = true },
+		jsonc = { "prettierd", "prettier", stop_after_first = true },
+		yaml = { "prettierd", "prettier", stop_after_first = true },
+		markdown = { "prettierd", "prettier", stop_after_first = true },
+		graphql = { "prettierd", "prettier", stop_after_first = true },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
+		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
+		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 
 		python = function(bufnr)
 			if conform.get_formatter_info("ruff_format", bufnr).available then
@@ -22,8 +27,10 @@ conform.setup({
 			end
 		end,
 
-		-- run codespell/trim whitespace for all files
-		["*"] = { "codespell --ignore-words .codespellignore" },
+		-- NOTE: conform formatter entries are *names*, not shell strings -- the old
+		-- `"codespell --ignore-words .codespellignore"` entry errored on every format.
+		-- To re-enable codespell, register it as a custom formatter under `formatters`.
+		-- ["*"] = { "codespell" },
 		["_"] = { "trim_whitespace" },
 	},
 

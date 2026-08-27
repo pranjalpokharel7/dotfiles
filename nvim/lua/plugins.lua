@@ -13,7 +13,7 @@ return {
 	-- telescope, finder
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
+		tag = "v0.2.2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
@@ -70,8 +70,36 @@ return {
 		"lewis6991/gitsigns.nvim",
 	},
 
+	-- mason, manages lsp/formatter binaries
+	{
+		"mason-org/mason.nvim",
+		dependencies = {
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+		},
+	},
+
+	-- treesitter, syntax highlighting / textobjects
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+	},
+
+	-- auto close/rename jsx & html tags
+	{
+		"windwp/nvim-ts-autotag",
+		opts = {},
+	},
+
 	-- indent object (for python selection at indentation levels)
 	{
 		"michaeljsmith/vim-indent-object",
+	},
+
+	-- render markdown
+	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+		opts = {},
 	}
 }
