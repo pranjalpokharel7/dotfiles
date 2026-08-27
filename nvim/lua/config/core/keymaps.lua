@@ -26,3 +26,6 @@ vim.keymap.set("n", "<c-a>", ":%s/\\r$//g<CR>", { desc = "Remove trailing ^M cha
 
 -- close the quickfix window
 vim.keymap.set('n', '<c-p>', ':cclose<CR>', { desc = 'Close quickfix' })
+
+-- disable q: (command history)
+vim.keymap.set('n', 'q:', '<Nop>', { noremap = true, silent = true })
