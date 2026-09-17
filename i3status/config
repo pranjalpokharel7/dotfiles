@@ -1,0 +1,29 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "wireless wlp0s20f3"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+wireless wlp0s20f3 {
+        format_up = "W: %essid (%quality)"
+        format_down = "W: down"
+}
+
+volume master {
+        format = "V: %volume"
+        format_muted = "V: muted"
+}
+
+battery 0 {
+        format = "%status %percentage"
+        path = "/sys/class/power_supply/BAT0/uevent"
+        low_threshold = 15
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
+}
