@@ -1,0 +1,29 @@
+[global]
+    origin = top-center
+    offset = 0x30
+    width = 350
+    height = 300
+    frame_color = "#000000"
+    frame_width = 0
+    corner_radius = 8
+
+    transparency = 25
+    background = "#000000"
+    foreground = "#ffffff"
+
+    font = monospace 10
+    padding = 12
+    horizontal_padding = 12
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#ffffff"
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#ffffff"
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
